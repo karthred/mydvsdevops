@@ -71,6 +71,7 @@ public class JavaMailUtil_mxJPO {
 			System.out.println("------1--------");
 			System.out.println("------2--------");
 			System.out.println("------4--------");
+			System.out.println("------3--------");
 			if(UIUtil.isNotNullAndNotEmpty(ccEmail)) {
 				message.addRecipient(Message.RecipientType.CC,new InternetAddress(ccEmail));
 			}
