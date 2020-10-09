@@ -68,6 +68,7 @@ public class JavaMailUtil_mxJPO {
 			message.addHeader("Content-Transfer-Encoding", "8bit");
 			message.setFrom(new InternetAddress(fromEmail,fromEmailLabel));  
 			message.addRecipient(Message.RecipientType.TO,new InternetAddress(toEmail));
+			System.out.println("------1--------");
 			if(UIUtil.isNotNullAndNotEmpty(ccEmail)) {
 				message.addRecipient(Message.RecipientType.CC,new InternetAddress(ccEmail));
 			}
@@ -86,6 +87,7 @@ public class JavaMailUtil_mxJPO {
 			throw ex;
 		} 
 		System.out.println("Final Code=======");
+		}  
 
 	}
 }
