@@ -35,6 +35,7 @@ public class JavaMailUtil_mxJPO {
 			String strSMTPPort = null;
 			for (Object object : attJavaMailRanges) {
 				strRange = object.toString();
+				System.out.println("strRange---->"+strRange);
 				String[] strArrTemp = strRange.split(":");
 				//hmJavaMailConfig.put(strArrTemp[0].trim(), strArrTemp[1].trim());
 				if("SMTP_HOST".equals(strArrTemp[0].trim())) {
@@ -48,7 +49,7 @@ public class JavaMailUtil_mxJPO {
 			String ccEmail = args[1];
 			String subject = args[2];
 			String body = args[3];
-
+			System.out.println("body---->"+body);
 			//Get the session object  
 			Properties properties = System.getProperties();  
 			properties.setProperty("mail.smtp.host", strSMTPHost);
@@ -84,6 +85,8 @@ public class JavaMailUtil_mxJPO {
 
 		} catch (Exception ex) {
 			throw ex;
+		} 
+		System.out.println("Final Code=======");
 		}  
 
 	}
